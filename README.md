@@ -1,4 +1,4 @@
-#Personality Prediction Project
+# Personality Prediction Project
 This is a Machine Learning Model of a Personality Prediction, where a spreadsheet of 50 questions will be taken as an input for user. Their responses will be stored in a format, suitable for Model to predict the user's personality. the Clustering model will work to display the the personality cluster. The Model is implemented using OCEAN personality model
 Did some visualizations.
 
