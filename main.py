@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 # Create the Streamlit app
 st.title("Personality Prediction App")
-st.subheader("Your personality will be generated below:")
+st.subheader("Your personality results will be generated below:")
 st.sidebar.title("Test your personality here!")
 
 # Define the list of questions
