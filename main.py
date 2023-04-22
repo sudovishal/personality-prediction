@@ -95,10 +95,6 @@ for i, question in enumerate(questions):
     response = st.sidebar.radio(question, ["Highly Disagree", "Disagree", "Neutral", "Agree", "Highly Agree"], key=i)
     responses.append(word_to_number[response])
 
-# # Add a "Submit" button to generate the Excel file
-# if st.sidebar.button("Submit"):
-#     generate_excel_file()
-#     st.success("Responses saved to Excel file")
 
 # Add a "Submit" and "Reset" button
 col1, col2 = st.sidebar.columns(2)
