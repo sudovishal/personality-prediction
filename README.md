@@ -3,3 +3,4 @@ This is a Machine Learning Model of a Personality Prediction, where a spreadshee
 Did some visualizations.
 
 This project is referred from [here](https://www.kaggle.com/code/akdagmelih/five-personality-clusters-k-means). I have done some changes as per my requirements.
+The Project is deployed [here](https://vish-shinde-personality-prediction-main-0odggx.streamlit.app/) using Streamlit Community Cloud
