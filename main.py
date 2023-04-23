@@ -182,25 +182,25 @@ def generate_personality():
         st.caption("_The measure of intelligence is the ability to change._ - Albert Einstein")
         st.caption("_The greatest glory in living lies not in never falling, but in rising every time we fall._ - Nelson Mandela")
     elif max_cols[0] == 'extroversion':
-        st.caption("I am not a product of my circumstances. I am a product of my decisions._ - Stephen Covey")       
-        st.caption("Success is not final, failure is not fatal: it is the courage to continue that counts._ - Winston Churchill")
-        st.caption("The best way to predict your future is to create it._ - Abraham Lincoln")
-        st.caption("If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough._ - Oprah Winfrey")
+        st.caption("_I am not a product of my circumstances. I am a product of my decisions._ - Stephen Covey")       
+        st.caption("_Success is not final, failure is not fatal: it is the courage to continue that counts._ - Winston Churchill")
+        st.caption("_The best way to predict your future is to create it._ - Abraham Lincoln")
+        st.caption("_If you look at what you have in life, you'll always have more. If you look at what you don't have in life, you'll never have enough._ - Oprah Winfrey")
     elif max_cols[0] == 'agreeable':
-        st.caption("We can never obtain peace in the outer world until we make peace with ourselves._ - Dalai Lama XIV (Agreeable people tend to prioritize harmony and avoid conflict.)")
-        st.caption("The greatest glory in living lies not in never falling, but in rising every time we fall._ - Nelson Mandela (Agreeable people are often compassionate and empathetic.)")
-        st.caption("In the end, we will remember not the words of our enemies, but the silence of our friends._ - Martin Luther King Jr. (Agreeable people value relationships and tend to avoid confrontations.)")
-        st.caption("Happiness is not something ready-made. It comes from your own actions._ - Dalai Lama XIV (Agreeable people are often optimistic and have a positive outlook on life.)")
+        st.caption("_We can never obtain peace in the outer world until we make peace with ourselves._ - Dalai Lama XIV (Agreeable people tend to prioritize harmony and avoid conflict.)")
+        st.caption("_The greatest glory in living lies not in never falling, but in rising every time we fall._ - Nelson Mandela (Agreeable people are often compassionate and empathetic.)")
+        st.caption("_In the end, we will remember not the words of our enemies, but the silence of our friends._ - Martin Luther King Jr. (Agreeable people value relationships and tend to avoid confrontations.)")
+        st.caption("_Happiness is not something ready-made. It comes from your own actions._ - Dalai Lama XIV (Agreeable people are often optimistic and have a positive outlook on life.)")
     elif max_cols[0] == 'conscientious':
-        st.caption("Success is not final, failure is not fatal: it is the courage to continue that counts._ - Winston Churchill (known for his strong work ethic and attention to detail)")
-        st.caption("The difference between ordinary and extraordinary is that little extra._ - Jimmy Johnson (former NFL coach known for his meticulous preparation and attention to detail)")
-        st.caption("The successful warrior is the average man, with laser-like focus._ - Bruce Lee (known for his discipline and dedication to his craft)")
-        st.caption("The only way to do great work is to love what you do._ - Steve Jobs (known for his attention to detail and drive for perfection)")
+        st.caption("_Success is not final, failure is not fatal: it is the courage to continue that counts._ - Winston Churchill (known for his strong work ethic and attention to detail)")
+        st.caption("_The difference between ordinary and extraordinary is that little extra._ - Jimmy Johnson (former NFL coach known for his meticulous preparation and attention to detail)")
+        st.caption("_The successful warrior is the average man, with laser-like focus._ - Bruce Lee (known for his discipline and dedication to his craft)")
+        st.caption("_The only way to do great work is to love what you do._ - Steve Jobs (known for his attention to detail and drive for perfection)")
     elif max_cols[0] == 'neurotic':
-        st.caption("Worrying is like a rocking chair, it gives you something to do, but it gets you nowhere._ - Glenn Turner")
-        st.caption("Anxiety is a thin stream of fear trickling through the mind. If encouraged, it cuts a channel into which all other thoughts are drained._ - Arthur Somers Roche")
-        st.caption("I have had a lot of worries in my life, most of which never happened._ - Mark Twain")
-        st.caption("You must learn to let go. Release the stress. You were never in control anyway._ - Steve Maraboli")
+        st.caption("_Worrying is like a rocking chair, it gives you something to do, but it gets you nowhere._ - Glenn Turner")
+        st.caption("_Anxiety is a thin stream of fear trickling through the mind. If encouraged, it cuts a channel into which all other thoughts are drained._ - Arthur Somers Roche")
+        st.caption("_I have had a lot of worries in my life, most of which never happened._ - Mark Twain")
+        st.caption("_You must learn to let go. Release the stress. You were never in control anyway._ - Steve Maraboli")
         
     st.markdown("-------------------------------------------------------------------")
     st.markdown("-------------------------------------------------------------------")
@@ -214,7 +214,7 @@ def generate_personality():
     ax.set_ylim(0,5.0)
 
 # display the plot in Streamlit
-    st.write("Bar Graph of your Persnality Trait representing the most significant")
+    st.write("Bar Graph of your Personality Trait representing the most significant")
     st.pyplot(fig)
 
     st.markdown("The distribution of your Personality Traits")
