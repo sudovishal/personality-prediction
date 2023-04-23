@@ -165,7 +165,7 @@ def generate_personality():
     # display different text depending on the most significant trait
     if max_cols[0] == 'open':
         st.write("This trait refers to a person's openness to new experiences, ideas, and ways of thinking. People high in openness tend to be imaginative, curious, and creative.")
-    elif max_cols[0] == 'extraversion':
+    elif max_cols[0] == 'extr0version':
         st.write("This trait refers to a person's outgoingness, social energy, and assertiveness. People high in extraversion tend to be talkative, outgoing, and enjoy being around others.")
     elif max_cols[0] == 'agreeable':
             st.write("This trait refers to a person's tendency to be compassionate, cooperative, and empathetic. People high in agreeableness tend to be kind, helpful, and willing to put others first.")
@@ -181,7 +181,7 @@ def generate_personality():
         st.caption("_The best way to have a good idea is to have lots of ideas._ - Linus Pauling")
         st.caption("_The measure of intelligence is the ability to change._ - Albert Einstein")
         st.caption("_The greatest glory in living lies not in never falling, but in rising every time we fall._ - Nelson Mandela")
-    elif max_cols[0] == 'extraversion':
+    elif max_cols[0] == 'extroversion':
         st.caption("I am not a product of my circumstances. I am a product of my decisions._ - Stephen Covey")       
         st.caption("Success is not final, failure is not fatal: it is the courage to continue that counts._ - Winston Churchill")
         st.caption("The best way to predict your future is to create it._ - Abraham Lincoln")
