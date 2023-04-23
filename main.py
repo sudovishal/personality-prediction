@@ -62,38 +62,12 @@ questions = [
     "I spend time reflecting on things.",
     "I am full of ideas."
 ]
+
 # Create an empty list to store the user's responses
 responses = []
 
-# Define the path and name of the Excel file to store the responses
-responses_file = "responses.xlsx"
-
-# Create a function to generate the Excel file
-def generate_excel_file():
-    # Create a new workbook object
-    wb = openpyxl.Workbook()
-    
-    # Get the active sheet
-    ws = wb.active
-    
-    # Write the questions in the first row
-    for i, question in enumerate(questions):
-        ws.cell(row=1, column=i+1).value = question
-    
-    # Write the responses in the second row
-    for i, response in enumerate(responses):
-        ws.cell(row=2, column=i+1).value = response
-    
-    # Save the workbook
-    wb.save(responses_file)
-
-# Create a function to reset the responses list
-def reset_responses():
-    responses.clear()
-
 # Create a dictionary to map the words to numbers
 word_to_number = {"Highly Disagree": 1, "Disagree": 2, "Neutral": 3, "Agree": 4, "Highly Agree": 5}
-
 
 # Display the questions in the sidebar
 for i, question in enumerate(questions):
@@ -101,30 +75,95 @@ for i, question in enumerate(questions):
     responses.append(word_to_number[response])
 
 # Load the Excel file
-workbook = openpyxl.load_workbook('responses.xlsx')
+# workbook = openpyxl.load_workbook('responses.xlsx')
 
 # Select the worksheet
-worksheet = workbook['Sheet']
+# worksheet = workbook.active
+# # Iterate over the cells in the first row and replace their values with new values
+# new_values = ['EXT1','EXT2','EXT3','EXT4','EXT5','EXT6','EXT7','EXT8','EXT9','EXT10',
+#               'EST1','EST2','EST3','EST4','EST5','EST6','EST7','EST8','EST9','EST10',
+#               'AGR1','AGR2','AGR3','AGR4','AGR5','AGR6','AGR7','AGR8','AGR9','AGR10',
+#               'CSN1','CSN2','CSN3','CSN4','CSN5','CSN6','CSN7','CSN8','CSN9','CSN10',
+#               'OPN1','OPN2','OPN3','OPN4','OPN5','OPN6','OPN7','OPN8','OPN9','OPN10']
 
-# Iterate over the cells in the first row and replace their values with new values
-new_values = ['EXT1','EXT2','EXT3','EXT4','EXT5','EXT6','EXT7','EXT8','EXT9','EXT10',
+# for column in worksheet.iter_cols(min_row=1, max_row=1):
+#     for cell in column:
+#         if not cell.value:
+#             continue
+#         if cell.column > len(new_values):
+#             break
+#         cell.value = new_values[cell.column - 1]
+        
+# Save the modified Excel file
+# workbook.save('personality_result.xlsx')
+
+# Create a function to generate the Excel file
+def generate_excel_file():
+    # Create a new workbook object
+    # wb = openpyxl.Workbook()
+    wb = openpyxl.load_workbook('personality_result.xlsx')
+    
+    # Get the active sheet
+    ws = wb.active
+    
+    # Write the questions in the first row
+    # for i, question in enumerate(questions):
+    #     ws.cell(row=1, column=i+1).value = question
+
+    # Write the questions in the first row
+    # Iterate over the cells in the first row and replace their values with new values
+    new_values = ['EXT1','EXT2','EXT3','EXT4','EXT5','EXT6','EXT7','EXT8','EXT9','EXT10',
               'EST1','EST2','EST3','EST4','EST5','EST6','EST7','EST8','EST9','EST10',
               'AGR1','AGR2','AGR3','AGR4','AGR5','AGR6','AGR7','AGR8','AGR9','AGR10',
               'CSN1','CSN2','CSN3','CSN4','CSN5','CSN6','CSN7','CSN8','CSN9','CSN10',
               'OPN1','OPN2','OPN3','OPN4','OPN5','OPN6','OPN7','OPN8','OPN9','OPN10']
 
-for column in worksheet.iter_cols(min_row=1, max_row=1):
-    for cell in column:
-        if not cell.value:
-            continue
-        if cell.column > len(new_values):
-            break
-        cell.value = new_values[cell.column - 1]
-        
-# Save the modified Excel file
-workbook.save('personality_result.xlsx')
+    for column in ws.iter_cols(min_row=1, max_row=1):
+        for cell in column:
+            if not cell.value:
+                continue
+            if cell.column > len(new_values):
+                break
+            cell.value = new_values[cell.column - 1]
+
+
+    # Write the responses in the second row
+    for i, response in enumerate(responses):
+        ws.cell(row=2, column=i+1).value = response
+    
+    # Save the workbook
+    wb.save('personality_result.xlsx')
+
+# def generate_excel_file():
+    
+    
+#     ws = workbook.active
+
+#     # Create a new workbook object
+#     # wb = openpyxl.Workbook()
+    
+#     # Get the active sheet
+#     # ws = wb.active
+    
+#     # Write the questions in the first row
+#     for i, question in enumerate(questions):
+#         ws.cell(row=1, column=i+1).value = question
+    
+#     # Write the responses in the second row
+#     for i, response in enumerate(responses):
+#         ws.cell(row=2, column=i+1).value = response
+    
+#     # Save the workbook
+#     workbook.save('responses.xlsx')
+#     # wb.save(responses_file)
+
+# Create a function to reset the responses list
+def reset_responses():
+    responses.clear()
+
 
 def generate_personality():
+
     with open('model.pkl','rb') as f:
         mp = pickle.load(f)
 
