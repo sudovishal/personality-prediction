@@ -165,7 +165,7 @@ def generate_personality():
     # display different text depending on the most significant trait
     if max_cols[0] == 'open':
         st.write("This trait refers to a person's openness to new experiences, ideas, and ways of thinking. People high in openness tend to be imaginative, curious, and creative.")
-    elif max_cols[0] == 'extr0version':
+    elif max_cols[0] == 'extroversion':
         st.write("This trait refers to a person's outgoingness, social energy, and assertiveness. People high in extraversion tend to be talkative, outgoing, and enjoy being around others.")
     elif max_cols[0] == 'agreeable':
             st.write("This trait refers to a person's tendency to be compassionate, cooperative, and empathetic. People high in agreeableness tend to be kind, helpful, and willing to put others first.")
